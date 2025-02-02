@@ -19,4 +19,7 @@ class AboutViewController: UIViewController {
             webView.load(request)
         }
     }
+    @IBAction func close() {
+            dismiss(animated: true, completion: nil)
+        }
 }
