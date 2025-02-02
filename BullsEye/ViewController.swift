@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
     var currentValue = 0
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
     var round = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
         let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
         slider.setThumbImage(thumbImageNormal, for: .normal)
         
@@ -97,7 +98,7 @@ class ViewController: UIViewController {
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
     }
-    func startNewGame() {
+    @IBAction func startNewGame() {
         score = 0
         round = 0
         startNewRound()
